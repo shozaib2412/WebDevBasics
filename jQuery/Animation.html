@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Animation in jQuery</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+</head>
+
+<body>
+
+
+
+    <script>
+        $(document).ready(function () {
+            $("button").click(function () {
+
+                // Move Right (1st corner)
+                $("div").animate({ left: '600px', height: '120px', width: '120px' }, 2000)
+                    .css("background-color", "red")
+
+                    // Move Down (2nd corner)
+                    .animate({ top: '300px', height: '140px', width: '80px' }, 2000)
+                    .css("background-color", "blue")
+
+                    // Move Left (3rd corner)
+                    .animate({ left: '0px', height: '100px', width: '150px' }, 2000)
+                    .css("background-color", "green")
+
+                    // Move Up (4th corner - back to start)
+                    .animate({ top: '100px', height: '100px', width: '100px' }, 2000, function () {
+                        $(this).css("background-color", "yellow");
+                    });
+
+            });
+        });
+    </script>
+
+
+    <button>Start Animation</button>
+    <p>By default, all HTML elements have a static position, and cannot be moved. To manipulate the position, remember
+        to first set the CSS position property of the element to relative, fixed, or absolute!</p>
+    <div style="background:#98bf21;height:100px;width:100px;position:absolute;">
+    </div>
+
+</body>
+
+</html>

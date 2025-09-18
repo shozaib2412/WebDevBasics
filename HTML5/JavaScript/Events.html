@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event handler</title>
+     <script>
+        function test(){
+            document.getElementById("blr").innerHTML='Hello Bengaluru';
+        }
+        function myFunction(){
+            alert("Click Event generated")
+        }
+        function myFunction1(){
+            alert("Key Press Event generated")
+        }
+
+    </script>
+</head>
+<body>
+   <h1>JS events & DOM manipulation & CSS </h1>
+
+   <h2  onmouseover = "style.color = 'red' " onmouseout="style.color = 'green'">
+    Mouse over & out this text 
+   </h2>
+
+   <h2 id="blr"> DOM Programming in HTML</h2>
+   <input type="button" value="Click to change text" onclick="test()">
+   <input type="button" value="Click again" onclick="myFunction()">
+   <input type="text" name="username" id="username" onkeypress="myFunction1()">
+</body>
+</html>
